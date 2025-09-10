@@ -1,0 +1,14 @@
+.section1 {
+    /* margin-top: 50px; */
+    display: flex;
+    background-color: grey;
+    
+}
+
+.section1-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
