@@ -1,14 +1,14 @@
 import './Card.css'
 
-function Card({name, image, desc}) {
+function Card(props, desc) {
 
     return (
         <>
             <div className='card-container'>
                 <div>
-                    <img src={image} alt="user_image" height={"300px"} width={"auto"} />
+                    <img src={props.image} alt="user_image" height={"300px"} width={"auto"} />
                 </div>
-                <h1>{name}</h1>
+                <h1>{props.name}</h1>
                 <p>{desc}</p>
             </div>
         </>
