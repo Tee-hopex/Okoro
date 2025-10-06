@@ -1,10 +1,16 @@
 
 import {useState} from 'react'
+import { useEffect } from 'react'
 import './Form.css'
 
 function Form3() {
 
     const [error, setError] = useState(false)
+
+    useEffect(() => {
+        localStorage.setItem("error", error)
+    }, [error])
+
 
     const handleSubmit = (event) => {
         event.preventDefault()

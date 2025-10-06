@@ -1,5 +1,5 @@
 
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import './Form.css'
 
 function Form() {
@@ -8,14 +8,25 @@ function Form() {
     const [password, setPassword] = useState("")
     const [error, setError] = useState(false)
 
+    useEffect(() => {
+        localStorage.setItem("error", error)
+    }, [error])
+ 
+    useEffect(() => {
+        const localValue = localStorage.getItem("error")
+        console.log(localValue)
+    }, [error])
+
+    
+
     function handleNameChange(event) {
         setName(event.target.value)
-        console.log(name)
+        // console.log(name)
     }
 
     function handlePasswordChange(event){
         setPassword(event.target.value)
-        console.log(password)
+        // console.log(password)
 
         if (password.length < 7) {
             setError(true)

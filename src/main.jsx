@@ -26,6 +26,6 @@ createRoot(document.getElementById('root')).render(
 
     <Greet /> */}
 
-    <Form3 />
+    <Form />
   </StrictMode>,
 )
